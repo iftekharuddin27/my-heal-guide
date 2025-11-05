@@ -123,12 +123,12 @@ const Medicines = () => {
               </CardHeader>
               <CardContent>
                 <div className="flex items-center justify-between">
-                  <span className="text-2xl font-bold text-primary">₹{medicine.price}</span>
-                  <Button
+                  <span className="text-2xl font-bold text-primary">৳{medicine.price}</span>
+                  <Button className='flex justify-items-center px-3'
                     onClick={() => addToCart(medicine)}
                     size="sm"
                   >
-                    <Plus className="h-4 w-4 mr-2" />
+                    <Plus className="" />
                     Add to Cart
                   </Button>
                 </div>

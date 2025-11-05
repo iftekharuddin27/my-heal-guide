@@ -9,8 +9,8 @@ import { useNavigate } from 'react-router-dom';
 const doctors = [
   {
     id: '1',
-    name: 'Dr. Sarah Johnson',
-    specialty: 'Cardiologist',
+    name: 'Dr. Habibur Rahman',
+    specialty: 'Gastroenterology',
     experience: '15 years',
     rating: 4.8,
     location: 'City Hospital',
@@ -19,8 +19,8 @@ const doctors = [
   },
   {
     id: '2',
-    name: 'Dr. Michael Chen',
-    specialty: 'Pediatrician',
+    name: 'Dr. Md Mazharul Huq Tanim',
+    specialty: 'Endocrinologist',
     experience: '10 years',
     rating: 4.9,
     location: 'Children\'s Clinic',
@@ -29,8 +29,8 @@ const doctors = [
   },
   {
     id: '3',
-    name: 'Dr. Emily Davis',
-    specialty: 'Dermatologist',
+    name: 'Dr. Fazle Mahmud',
+    specialty: 'Neurosurgeon',
     experience: '12 years',
     rating: 4.7,
     location: 'Skin Care Center',
@@ -39,13 +39,73 @@ const doctors = [
   },
   {
     id: '4',
-    name: 'Dr. James Wilson',
-    specialty: 'Orthopedic',
+    name: 'Dr. Sudipta Kumer Mukherjee',
+    specialty: 'Pediatric Neurosurgeon',
     experience: '18 years',
     rating: 4.9,
     location: 'Bone & Joint Hospital',
     availability: 'Available in 3 days',
     image: '👩‍⚕️',
+  },
+    {
+    id: '5',
+    name: 'Prof. Dr. Md. Abdul Wahab Khan',
+    specialty: 'General Surgeon',
+    experience: '30 years',
+    rating: 4.7,
+    location: 'Parkview Hospital',
+    availability: 'Available Today',
+    image: '👨‍⚕️',
+  },
+    {
+    id: '6',
+    name: 'Dr. Raisul Islam',
+    specialty: 'General Surgeon',
+    experience: '15 years',
+    rating: 4.6,
+    location: 'eCare Hospital',
+    availability: 'Available in 2 days',
+    image: '👨‍⚕️',
+  },
+    {
+    id: '7',
+    name: 'Dr. Khadija Rahman Sonia',
+    specialty: 'General Surgeon',
+    experience: '35 years',
+    rating: 4.4,
+    location: 'City Hospital',
+    availability: 'Available tommorrow',
+    image: '👩‍⚕️',
+  },
+    {
+    id: '8',
+    name: 'Asst. Prof. Dr. Md. Abdul Munim Sarkar',
+    specialty: 'Cardiologist',
+    experience: '25 years',
+    rating: 4.5,
+    location: 'Alif Hospital',
+    availability: 'Available in 4 days',
+    image: '👨‍⚕️',
+  },
+    {
+    id: '9',
+    name: 'Dr. Sohel Mahmud',
+    specialty: 'Medicine Specialist',
+    experience: '23 years',
+    rating: 4.6,
+    location: 'City Hospital',
+    availability: 'Available Tommorrow',
+    image: '👨‍⚕️',
+  },
+    {
+    id: '10',
+    name: 'Dr. S. Mokaddas Hossain Sadi',
+    specialty: 'Cardiologist',
+    experience: '32 years',
+    rating: 4.8,
+    location: 'Cardiac Hospital',
+    availability: 'Available Today',
+    image: '👨‍⚕️',
   },
 ];
 
@@ -53,7 +113,7 @@ const Doctors = () => {
   const navigate = useNavigate();
   const [selectedSpecialty, setSelectedSpecialty] = useState<string | null>(null);
 
-  const specialties = ['All', 'Cardiologist', 'Pediatrician', 'Dermatologist', 'Orthopedic'];
+  const specialties = ['All', 'Cardiologist', 'Medicine Specialist', 'General Surgeon', 'Gastroenterology', 'Endocrinologist', 'Neurosurgeon', 'Pediatric Neurosurgeon'];
   
   const filteredDoctors = selectedSpecialty && selectedSpecialty !== 'All'
     ? doctors.filter(d => d.specialty === selectedSpecialty)
@@ -105,13 +165,13 @@ const Doctors = () => {
                   <MapPin className="h-4 w-4" />
                   {doctor.location}
                 </div>
-                <div className="flex items-center justify-between">
-                  <Badge variant="secondary">{doctor.availability}</Badge>
+                <div className="flex items-center flex-wrap gap-3">
+                  <Badge className='mr-2 font-medium text-xs' variant="secondary">{doctor.availability}</Badge>
                   <Button
                     onClick={() => navigate(`/book-appointment/${doctor.id}`)}
                     size="sm"
                   >
-                    <Calendar className="h-4 w-4 mr-2" />
+                    <Calendar className="h-2 w-2 " />
                     Book Appointment
                   </Button>
                 </div>
