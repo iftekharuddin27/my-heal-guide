@@ -46,6 +46,62 @@ const testPackages = [
     tests: ['SGPT', 'SGOT', 'Bilirubin', 'Alkaline Phosphatase'],
     icon: '🏥',
   },
+  {
+    id: 't6',
+    name: 'H1B Virus Test',
+    description: 'PCR test for H1B virus',
+    price: 2200,
+    tests: ['H1B PCR'],
+    icon: '🦠',
+  },
+  {
+    id: 't7',
+    name: 'Dengue Test',
+    description: 'Combo test for Dengue',
+    price: 1100,
+    tests: ['NS1', 'IgG', 'IgM'],
+    icon: '🦟',
+  },
+  {
+    id: 't8',
+    name: 'X-Ray',
+    description: 'Digital X-Ray imaging',
+    price: 700,
+    tests: ['Chest', 'Limb', 'Abdomen'],
+    icon: '🩻',
+  },
+  {
+    id: 't9',
+    name: 'ECG',
+    description: 'Electrocardiogram for heart rhythm',
+    price: 450,
+    tests: ['12-lead ECG'],
+    icon: '❤️',
+  },
+  {
+    id: 't10',
+    name: 'Echocardiogram',
+    description: 'Ultrasound study of the heart',
+    price: 2500,
+    tests: ['2D Echo', 'Color Doppler'],
+    icon: '❤️',
+  },
+  {
+    id: 't11',
+    name: 'MRI Scan',
+    description: 'Magnetic Resonance Imaging',
+    price: 8000,
+    tests: ['Brain', 'Spine', 'Joint'],
+    icon: '🧠',
+  },
+  {
+    id: 't12',
+    name: 'Ultrasound',
+    description: 'Ultrasonography of abdomen',
+    price: 1500,
+    tests: ['Whole Abdomen'],
+    icon: '🤰',
+  },
 ];
 
 const Tests = () => {
@@ -98,7 +154,7 @@ const Tests = () => {
                 </CardHeader>
                 <CardContent>
                   <div className="flex items-center justify-between">
-                    <span className="text-2xl font-bold text-primary">₹{pkg.price}</span>
+                    <span className="text-2xl font-bold text-primary">৳ {pkg.price}</span>
                     <Button
                       onClick={() => navigate(`/book-test/${pkg.id}`)}
                       size="sm"

@@ -1,65 +1,11 @@
+// src/pages/Articles.tsx
+
 import { Header } from '@/components/Header';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Clock, TrendingUp } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
-
-const articles = [
-  {
-    id: 'a1',
-    title: '10 Ways to Boost Your Immune System',
-    excerpt: 'Learn effective strategies to strengthen your body\'s natural defenses...',
-    category: 'Wellness',
-    readTime: '5 min',
-    trending: true,
-    image: '🏥',
-  },
-  {
-    id: 'a2',
-    title: 'Understanding Heart Health',
-    excerpt: 'Essential information about maintaining a healthy cardiovascular system...',
-    category: 'Cardiology',
-    readTime: '7 min',
-    trending: true,
-    image: '❤️',
-  },
-  {
-    id: 'a3',
-    title: 'Healthy Eating Habits',
-    excerpt: 'A comprehensive guide to nutrition and balanced diet...',
-    category: 'Nutrition',
-    readTime: '6 min',
-    trending: false,
-    image: '🥗',
-  },
-  {
-    id: 'a4',
-    title: 'Mental Health Matters',
-    excerpt: 'Understanding and managing stress, anxiety, and depression...',
-    category: 'Mental Health',
-    readTime: '8 min',
-    trending: true,
-    image: '🧠',
-  },
-  {
-    id: 'a5',
-    title: 'Exercise and Fitness Tips',
-    excerpt: 'Simple workouts and exercises for a healthier lifestyle...',
-    category: 'Fitness',
-    readTime: '5 min',
-    trending: false,
-    image: '💪',
-  },
-  {
-    id: 'a6',
-    title: 'Sleep Better Tonight',
-    excerpt: 'Science-backed tips to improve your sleep quality...',
-    category: 'Wellness',
-    readTime: '4 min',
-    trending: false,
-    image: '😴',
-  },
-];
+import { articles } from '@/data/articles'; // Import the articles data
 
 const Articles = () => {
   const navigate = useNavigate();

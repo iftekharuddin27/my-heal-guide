@@ -56,9 +56,66 @@ const medicines = [
     category: 'Pain Relief',
     image: '💊',
   },
+  {
+    id: 'm7',
+    name: 'Savlon Cream',
+    description: 'Antiseptic cream for cuts',
+    price: 55,
+    category: 'Antiseptic',
+    image: '🧴',
+  },
+  {
+    id: 'm8',
+    name: 'Monteen 10mg',
+    description: 'Asthma & allergy relief',
+    price: 150,
+    category: 'Allergy',
+    image: '💊',
+  },
+  {
+    id: 'm9',
+    name: 'Fexo 120mg',
+    description: 'Antihistamine for allergy',
+    price: 90,
+    category: 'Allergy',
+    image: '💊',
+  },
+  {
+    id: 'm10',
+    name: 'Adovas Syrup',
+    description: 'Cough and cold syrup',
+    price: 110,
+    category: 'Cough Syrup',
+    image: '🍾',
+  },
+  {
+    id: 'm11',
+    name: 'Tufnil 500mg',
+    description: 'Pain and fever relief',
+    price: 30,
+    category: 'Pain Relief',
+    image: '💊',
+  },
+  {
+    id: 'm12',
+    name: 'Vitamin B-13',
+    description: 'Orotic acid supplement',
+    price: 220,
+    category: 'Vitamins',
+    image: '💊',
+  },
 ];
 
-const categories = ['All', 'Pain Relief', 'Vitamins', 'Antibiotics', 'Allergy', 'Supplements'];
+const categories = [
+  'All',
+  'Pain Relief',
+  'Vitamins',
+  'Antibiotics',
+  'Allergy',
+  'Supplements',
+  'Antiseptic',
+  'Cough Syrup',
+];
 
 const Medicines = () => {
   const [search, setSearch] = useState('');
@@ -123,7 +180,7 @@ const Medicines = () => {
               </CardHeader>
               <CardContent>
                 <div className="flex items-center justify-between">
-                  <span className="text-2xl font-bold text-primary">৳{medicine.price}</span>
+                  <span className="text-3xl font-bold text-primary">৳{medicine.price}</span>
                   <Button className='flex justify-items-center px-3'
                     onClick={() => addToCart(medicine)}
                     size="sm"
