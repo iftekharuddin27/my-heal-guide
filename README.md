@@ -35,4 +35,4 @@ It is built with:
 To start the app in development mode, run:
 
 ```sh
-npm run dev
+ npm run dev
