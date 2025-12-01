@@ -18,7 +18,7 @@ It is built with:
 ### Installation
 1.  **Clone the repository:**
     ```sh
-    git clone <https://github.com/iftekharuddin27/my-heal-guide>
+    git clone https://github.com/iftekharuddin27/my-heal-guide
     ```
 
 2.  **Navigate to the project directory:**
